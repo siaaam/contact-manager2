@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-import contacts from '../data.json';
+
 import Contact from './Contact';
 
 class Contacts extends Component {
-  state = {
-    contacts: contacts,
-  };
   render() {
-    const { contacts } = this.state;
+    const { contacts } = this.props;
     return (
       <div>
         <h2 className="text-center py-4">All contacts goes here</h2>

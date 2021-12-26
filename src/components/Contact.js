@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Contact extends Component {
   render() {
@@ -12,6 +13,9 @@ class Contact extends Component {
           <p className="card-text">{contact.email}</p>
           <p className="card-text">{contact.gender}</p>
           <p className="card-text">{contact.birthday}</p>
+          <Link className="btn btn-primary" to={'contacts/' + contact.id}>
+            View Details
+          </Link>
         </div>
       </div>
     );
